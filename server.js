@@ -12,7 +12,7 @@
   * Get port from environment and store in Express.
   */
  
- var port = normalizePort(process.env.PORT || '3002');
+ var port = normalizePort(process.env.PORT || '3000');
  app.set('port', port);
  
  //app.use(function(req, res, next) {
@@ -31,7 +31,7 @@
   * Listen on provided port, on all network interfaces.
   */
  
- server.listen(port);
+ server.listen('0.0.0.0', port);
  server.on('error', onError);
  server.on('listening', onListening);
  
